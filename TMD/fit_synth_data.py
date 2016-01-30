@@ -59,7 +59,7 @@ for p in p_indices:
     plt.text(.15, .9, 'mean: %.4f\nstd_dev: %.4f' % (mean, std_dev),
                  ha='center', va='center', transform=plt.gca().transAxes)
 
-    #plt.savefig(r'plots\synth_parameters\%s.png' % p)
+    #plt.savefig(r'plots/synth_parameters/%s.png' % p)
 
     plt.show()
 

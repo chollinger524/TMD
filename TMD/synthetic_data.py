@@ -124,7 +124,7 @@ if __name__ == '__main__':
         plt.text(.2, .9, 'mean: %.4f\nstd_dev: %.4f' % (mean, std_dev),
                  ha='center', va='center', transform=ax.transAxes)
 
-        #plt.savefig('plots\synth_values\%s_%d_values_point_%d.png'
+        #plt.savefig('plots/synth_values/%s_%d_values_point_%d.png'
         #            % (DATA, n, P))
 
         plt.show()

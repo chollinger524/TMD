@@ -10,10 +10,10 @@ from scipy.optimize import leastsq
 import residuals
 
 # Get the data.
-tables = {'Dpp': pd.io.excel.read_excel('data\Dpp_unpol_Data.xlsx', header=0),
-          'Dpm': pd.io.excel.read_excel('data\Dpm_unpol_Data.xlsx', header=0),
-          'Ppp': pd.io.excel.read_excel('data\Ppp_unpol_Data.xlsx', header=0),
-          'Ppm': pd.io.excel.read_excel('data\Ppm_unpol_Data.xlsx', header=0)}
+tables = {'Dpp': pd.io.excel.read_excel('data/Dpp_unpol_Data.xlsx', header=0),
+          'Dpm': pd.io.excel.read_excel('data/Dpm_unpol_Data.xlsx', header=0),
+          'Ppp': pd.io.excel.read_excel('data/Ppp_unpol_Data.xlsx', header=0),
+          'Ppm': pd.io.excel.read_excel('data/Ppm_unpol_Data.xlsx', header=0)}
 
 # Modify table columns for compliance with res_array_of_table reqs.
 for table in tables.values():
