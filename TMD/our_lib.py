@@ -1,7 +1,24 @@
-"""This module prepares the objects that are used in our research.
+"""
+This module prepares the objects that are used in our research.
 
-Attributes:
-    tables: """
+tables: A dict with keys ['Dpp', 'Dpm', 'Ppp', 'Ppm'] mapped to
+       pd.DataFrame objects with columns ['x', 'exp_y', 'err'].
+theor_funcs: A dict with keys ['Dpp', 'Dpm', 'Ppp', 'Ppm'].
+             The keys are mapped to functions.
+             The functions take args x and p:
+                 x: A numerical value or an array.
+                 p: A sequence of parameters.
+tables_funcs: A list of the pd.DataFrame objects in tables and the functions
+              in theor_funcs paired together by key.
+res_of_p: A function of one arg, p.
+          p must be a sequence of 5 parameters.
+          Returns an array of the residuals determined by the data and
+          functions in tables_funcs when p is passed to the functions in
+          table_funcs.
+start_p: The initial sequence of parameters passed to the leastsq optimization.
+opt_p: The optimized sequence of parameters.
+opt_chi2: The chi^2 value based on the residuals calculated with opt_p.
+"""
 
 from functools import partial
 import numpy as np
